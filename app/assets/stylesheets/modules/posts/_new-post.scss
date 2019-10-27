@@ -1,0 +1,84 @@
+.new-post{
+  width: 700px;
+  background-color:#EEEEEE;
+  height: 1020px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  &__heading{
+    text-align: center;
+    padding-top:30px;
+    margin-bottom:43px;
+    &--text{
+      font-weight: bold;
+      font-size:30px;
+    }
+  }
+  &__form{
+    max-width: 530px;
+    margin: 0 auto;
+    &__title{
+      &--label{
+        font-weight:bold;
+      }
+      &--input{
+        @include input-text-default;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__place{
+      &--label{
+        font-weight:bold;
+        margin-top:20px;
+      }
+      &--input{
+        @include input-text-default;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__image{
+      &--label{
+        font-weight:bold;
+        margin-top:20px;
+      }
+      &--input{
+        display: none;
+      }
+      &--box{
+        width:100%;
+        height:310px;
+        background-color:#fff ;
+        border: #000000	 solid 2px;
+        margin-top:6px;
+        margin-bottom:20px;
+        position: relative;
+        &--text{
+          position: absolute;
+          top:140px;
+          left:180px;
+        }
+        .photo_img{
+          width:100%;
+          height:310px;
+        }
+      }
+    }
+    &__text{
+      font-weight:bold;
+      margin-top:20px;
+      &--input{
+        @include input-many-text;
+        font-weight: lighter;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__submit{
+      &--button{
+        @include btn-default;
+        margin-top:25px;
+      }
+    }
+  }
+}

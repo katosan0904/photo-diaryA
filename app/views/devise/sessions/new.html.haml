@@ -1,0 +1,14 @@
+.login-page
+  .login-page__title
+    %p.login-page__title--text
+      ログイン
+  .login-page__form
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .login-page__form__email
+        =f.label :email,"メールアドレス",class:"login-page__form__email--label"
+        =f.email_field :email,class:"login-page__form__email--input"
+      .login-page__form__password
+        =f.label :password,"パスワード",class:"login-page__form__password--label"
+        =f.password_field :password,class:"login-page__form__password--input"
+      .login-page__form__submit
+        = f.submit "ログイン",class:"login-page__form__submit--button"

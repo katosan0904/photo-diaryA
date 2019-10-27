@@ -1,0 +1,37 @@
+.comment-box{
+  margin:0 auto;
+  margin-top:10px;
+  width:485px;
+  height:120px;
+  background-color:#eef0f4;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  &__name{
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 10px;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  &__text{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+  }
+  &__day{
+    text-align: right;
+    margin-right: 20px;
+    position: absolute;
+    top:95px;
+    right:0px;
+  }
+  &__delete{
+    text-align: left;
+    margin-left: 20px;
+    position: absolute;
+    top:95px;
+    left:0px;
+  }
+}

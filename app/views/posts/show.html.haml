@@ -1,0 +1,28 @@
+.show-page
+  .show-page__title
+    =@post.title
+  .show-page__place
+    =fa_icon 'map-marker'
+    =@post.place
+  .show-page__day
+    =fa_icon 'calendar'
+    =@post.created_at.strftime("%Y/%m/%d")
+  .show-page__image
+    =image_tag @post.image ,width:"300px",height:"200px",class:"show-page__image--tag"
+  .show-page__text
+    =@post.text
+  .show-page__comment
+    %p.show-page__comment--title
+      コメント
+    .show-page__comment--box
+      .show-page__comment--box--index
+        =render partial: "./comments/comments",collection:@comments ,as: :comment, locals:{post: @post}
+      -if signed_in?
+        .show-page__comment--box--form
+          = form_for [@post, @comment] do |f|
+            =f.text_area :comment, class:"show-page__comment--box--form--input"
+            =f.submit "投稿する",class:"show-page__comment--box--form--button"
+      -else 
+        %p.show-page__comment--box--text
+          コメントをするにはログインをしてください。
+          

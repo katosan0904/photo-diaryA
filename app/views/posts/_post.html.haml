@@ -1,0 +1,17 @@
+.post
+  .post__image
+    = link_to post_path(post.id) do
+      =image_tag post.image ,class:"post__image--image-tag"
+  .post__title
+    = link_to post_path(post.id),class:"post__title--link" do
+      %p.post__title--text
+        =post.title
+  .post__text
+    %p.post__text--text
+      = truncate(post.text, length:30) do
+        = link_to "続きを読む",post_path(post.id),class:"post__text--text--next"
+  .post__day
+    %p.post__day--text
+      =fa_icon 'calendar'
+      =post.created_at.strftime("%Y/%m/%d")
+    

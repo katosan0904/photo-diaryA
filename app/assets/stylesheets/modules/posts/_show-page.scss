@@ -1,0 +1,92 @@
+.show-page{
+  width: 700px;
+  background-color:#EEEEEE;
+  height: auto;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  &__title{
+    padding-top:20px;
+    margin-bottom:10px;
+    margin-left:50px;
+    font-weight: bold;
+    font-size:30px;
+  }
+  &__place{
+    margin-bottom:8px;
+    margin-left:50px;
+    font-size:21px;
+    font-weight:bolder;
+  }
+  &__day{
+    margin-bottom:8px;
+    margin-left:50px;
+    font-size:18px;
+    font-weight:bolder;
+    text-align: right;
+    margin-right:50px;
+  }
+  &__image{
+    text-align: center;
+    &--tag{
+      border: black solid 4px;
+      border-radius: 4px;
+      width:590px;
+      height:393px;
+    }
+  }
+  &__text{
+    margin-left:50px;
+    margin-right:50px;
+    margin-top:30px;
+    font-weight:bolder;
+    line-height: 170%;
+  }
+  &__comment{
+    margin-top:95px;
+    &--title{
+      text-align: left;
+      font-size:21px;
+      font-weight:bolder;
+      margin-left:67px;
+    }
+    &--box{
+      width:560px;
+      height:700px;
+      background-color: #fff;
+      padding-top:5px;
+      margin:0 auto;
+      margin-top:10px;
+      text-align: center;
+      position: relative;
+      &--index{
+        overflow: scroll;
+        height:490px;
+      }
+      &--form{
+        position: absolute;
+        bottom:10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        &--input{
+          @include input-many-text($width: 420px, $height: 95px);
+          display: block;
+          font-weight: lighter;
+          margin:0 auto;
+          margin-top:6px;
+        }
+        &--button{
+          display: block;
+          margin:0 auto;
+          @include btn-default;
+          margin-top:20px;
+        }
+      }
+      &--text{
+        font-size:21px;
+        font-weight:bolder;
+        padding-top: 95px;
+      }
+    }
+  }
+}

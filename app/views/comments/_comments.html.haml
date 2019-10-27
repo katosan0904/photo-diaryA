@@ -1,0 +1,12 @@
+.comment-box
+  .comment-box__name
+    ="#{comment.user.nickname}さん"
+  .comment-box__text
+    =comment.comment
+  .comment-box__day
+    =fa_icon 'calendar'
+    =comment.created_at.strftime("%Y/%m/%d")
+  -if current_user==comment.user || current_user==1
+    .comment-box__delete
+      =link_to "/posts/#{post.id}/comments/#{comment.id}", method: :DELETE do
+        =fa_icon 'trash'

@@ -1,0 +1,24 @@
+%header.header
+  %h1.title
+    = link_to image_tag("logo1.png",width:"160",height:"50"),"/",class:"title__img"
+  -unless signed_in?
+    .sign-in
+      = link_to 'ログイン', new_user_session_path, class: 'sign-in--button'
+      .sign-up
+      = link_to '新規会員登録', new_user_registration_path, class: 'sign-up--button'
+  -if signed_in?
+    .sign-out
+      = link_to 'ログアウト', destroy_user_session_path,method: :delete, class: 'sign-out--button'
+  -if signed_in? && current_user.id == 1
+    .notification-master
+      %p.notification-master--text
+        マスターアカウントでログイン中です
+    .post-link
+      = link_to '投稿する', new_post_path, class: 'post-link--button'
+  -if controller.action_name== "show" && controller.controller_name =="posts" && signed_in? && current_user.id == 1
+    .delete-post
+      =link_to "/posts/#{@post.id}", method: :DELETE do 
+        =fa_icon "trash",class:"trash-icon"
+    .edit-post
+      =link_to edit_post_path(@post) do
+        =fa_icon "undo", class:"undo-icon"

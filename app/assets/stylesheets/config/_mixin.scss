@@ -1,0 +1,45 @@
+@mixin input-text-default($width: 100%, $height: 25px) {
+  height: $height;
+  width: $width;
+  padding: 4px 4px 4px 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 20px;
+  display: inline-block;
+  &:focus {
+    outline: 0;
+    border: 1px solid #FF9872;
+  }
+}
+@mixin input-many-text($width: 100%, $height: 200px) {
+  height: $height;
+  width: $width;
+  padding: 4px 4px 4px 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 13px;
+  display: inline-block;
+  &:focus {
+    outline: 0;
+    border: 1px solid #FF9872;
+  }
+}
+@mixin btn-default($bgc:#0000EE) {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid transparent;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background-color: $bgc;
+  &:hover {
+    opacity: 0.8;
+  }
+}

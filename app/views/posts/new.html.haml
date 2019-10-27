@@ -1,0 +1,24 @@
+.new-post
+  .new-post__heading
+    %p.new-post__heading--text
+      投稿する
+  .new-post__form
+    = form_for @posts do |f|
+      .new-post__form__title
+        =f.label :title,"タイトル",class:"new-post__form__title--label"
+        =f.text_field :title,class:"new-post__form__title--input"
+      .mew-post__form__place
+        =f.label :place, "場所", class:"new-post__form__place--label"
+        =f.text_field :place, class:"new-post__form__place--input"
+      .new-post__form__image
+        =f.label :image, class:"new-post__form__image--label",for:"image_field" do
+          画像
+          .new-post__form__image--box
+            %p.new-post__form__image--box--text
+              クリックで画像を選択
+        =f.file_field :image, class:"new-post__form__image--input",id:"image_field"
+      .new-post__form__text
+        =f.label :text, "内容", class:"new-post__form__text--label"
+        =f.text_area :text, class:"new-post__form__text--input"
+      .new-post__form__submit
+        =f.submit "投稿する",class:"new-post__form__submit--button"

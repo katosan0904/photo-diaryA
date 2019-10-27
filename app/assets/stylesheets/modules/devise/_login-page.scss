@@ -1,0 +1,45 @@
+.login-page{
+  width: 700px;
+  background-color:#EEEEEE;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  &__title{
+    text-align: center;
+    padding-top:30px;
+    margin-bottom:43px;
+    &--text{
+      font-weight: bold;
+      font-size:30px;
+    }
+  }
+  &__form{
+    max-width: 365px;
+    margin: 0 auto;
+    &__email{
+      &--label{
+        font-weight:bold;
+      }
+      &--input{
+        @include input-text-default;
+        margin-top:6px;
+        margin-bottom:20px;
+        font-weight: lighter;
+      }
+    }
+    &__password{
+        font-weight:bold;
+      &--input{
+        @include input-text-default;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__submit{
+      &--button{
+        @include btn-default;
+        margin-top:25px;
+      }
+    }
+  }
+}
