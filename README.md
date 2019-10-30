@@ -15,3 +15,6 @@ photo-diary
 
 # デプロイ先URL
   https://still-peak-48688.herokuapp.com/
+  ID: master@gmail.com
+  Password: master1234
+  上記のアカウントで投稿できます。
