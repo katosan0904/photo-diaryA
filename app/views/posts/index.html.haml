@@ -1,3 +1,5 @@
 .top-page
   .top-page__post
     =render partial: "post",collection: @posts, as: :post
+  .top-page__paginate
+    =paginate @posts
