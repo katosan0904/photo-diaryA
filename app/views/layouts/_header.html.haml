@@ -17,8 +17,17 @@
       = link_to '投稿する', new_post_path, class: 'post-link--button'
   -if controller.action_name== "show" && controller.controller_name =="posts" && signed_in? && current_user.id == 1
     .delete-post
-      =link_to "/posts/#{@post.id}", method: :DELETE do 
-        =fa_icon "trash",class:"trash-icon"
+      =fa_icon "trash",class:"trash-icon"
+    .post-modal
+      .post-modal__bg
+        .post-modal__window
+          %p.post-modal__window--message
+            投稿を削除しますか？
+          .post-modal__window--cancel
+            キャンセル
+          .post-modal__window--ok
+            =link_to "/posts/#{@post.id}", method: :DELETE do
+              削除する
     .edit-post
       =link_to edit_post_path(@post) do
         =fa_icon "undo", class:"undo-icon"
