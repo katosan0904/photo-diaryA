@@ -9,7 +9,7 @@ $(function(){
     $('.post-modal').fadeOut();
     $('body').css("overflow", "scroll");
   });
-  $('..post-modal__window--ok').on('click', function(){
+  $('.post-modal__window--ok').on('click', function(){
     $('.modal').fadeOut();
   });
 });

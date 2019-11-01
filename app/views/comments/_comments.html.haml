@@ -8,5 +8,14 @@
     =comment.created_at.strftime("%Y/%m/%d")
   -if current_user==comment.user || current_user==1
     .comment-box__delete
-      =link_to "/posts/#{post.id}/comments/#{comment.id}", method: :DELETE do
-        =fa_icon 'trash'
+      =fa_icon 'trash',class:"comment-trash-icon"
+    .comment-modal
+      .comment-modal__bg
+        .comment-modal__window
+          %p.comment-modal__window--message
+            コメントを削除しますか？
+          .comment-modal__window--cancel
+            キャンセル
+          .comment-modal__window--ok
+            =link_to "/posts/#{post.id}/comments/#{comment.id}", method: :DELETE do
+              削除する
