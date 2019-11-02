@@ -1,0 +1,69 @@
+.show-page__share{
+  margin: 100px auto;
+  text-align: center;
+  .facebook {
+    background-color: #2e4a88;
+    box-shadow: 0 4px 0 #1B3D82;
+    text-shadow: 0 -1px -1px #1B3D82;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+      &:hover {
+        background-color: #354F84;
+      }
+      &:active {
+        top: 2px;
+          box-shadow: 0 2px 0 #1B3D82;
+      }
+  }
+  .twitter {
+    background-color: #008DDE;
+    box-shadow: 0 4px 0 #0078BD;
+
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+    &:active {
+      top: 2px;
+        box-shadow: 0 2px 0 #0078BD;
+    }
+    &:hover {
+      background-color: #1397D8;
+    }
+  }
+  .line {
+    background-color: #35de00;
+    box-shadow: 0 4px 0 #2dc715;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+    &:active {
+      top: 2px;
+        box-shadow: 0 2px 0 #2dc715;
+    }
+    &:hover {
+      background-color: #35de00ed;
+    }
+  }
+}
