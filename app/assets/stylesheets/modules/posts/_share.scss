@@ -1,6 +1,5 @@
 .show-page__share{
-  margin: 100px auto;
-  text-align: center;
+  margin: 100px 50px;
   .facebook {
     background-color: #2e4a88;
     box-shadow: 0 4px 0 #1B3D82;
@@ -14,7 +13,7 @@
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    padding: 10px 10px;
       &:hover {
         background-color: #354F84;
       }
@@ -36,7 +35,7 @@
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    padding: 10px 20px;
     &:active {
       top: 2px;
         box-shadow: 0 2px 0 #0078BD;
@@ -57,7 +56,7 @@
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    padding: 10px 27px;
     &:active {
       top: 2px;
         box-shadow: 0 2px 0 #2dc715;
