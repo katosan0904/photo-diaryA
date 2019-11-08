@@ -10,6 +10,13 @@
       .mew-post__form__place
         =f.label :place, "場所", class:"new-post__form__place--label"
         =f.text_field :place, class:"new-post__form__place--input"
+      .new-post__form__category
+        =f.label :place, "カテゴリーを選択", class:"new-post__form__category--label"
+        =f.collection_select :category_id, Category.all, :id, :category, {prompt:"------"}, {class:"new-post__form__category--select"}
+      = f.fields_for :category do |i|
+        .new-post__form__new-category
+          =f.label :place, "新しいカテゴリー", class:"new-post__form__new-category--label"
+          =i.text_field :category, class:"new-post__form__new-category--input"
       .new-post__form__image
         =f.label :image, class:"new-post__form__image--label",for:"image_field" do
           画像

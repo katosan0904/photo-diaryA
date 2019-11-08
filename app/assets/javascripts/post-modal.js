@@ -11,5 +11,5 @@ $(function(){
   });
   $('.post-modal__window--ok').on('click', function(){
     $('.modal').fadeOut();
-  });
+  })
 });

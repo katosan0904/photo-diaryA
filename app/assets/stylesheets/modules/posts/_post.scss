@@ -63,4 +63,15 @@
     font-weight:lighter;
     }
   }
+  &__category{
+    text-align: right;
+    margin-left:10px;
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    &--text{
+    color:#fff;
+    font-weight:lighter;
+    }
+  }
 }

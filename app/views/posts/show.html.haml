@@ -7,6 +7,9 @@
   .show-page__day
     =fa_icon 'calendar'
     =@post.created_at.strftime("%Y/%m/%d")
+  .show-page__category
+    =fa_icon 'folder'
+    =@post.category.category
   .show-page__image
     =image_tag @post.image ,width:"300px",height:"200px",class:"show-page__image--tag"
   .show-page__text

@@ -12,7 +12,7 @@
     font-size:30px;
   }
   &__place{
-    margin-bottom:8px;
+    margin-bottom:15px;
     margin-left:50px;
     font-size:21px;
     font-weight:bolder;
@@ -22,7 +22,15 @@
     margin-left:50px;
     font-size:18px;
     font-weight:bolder;
-    text-align: right;
+    float: right;
+    margin-right:50px;
+  }
+  &__category{
+    margin-bottom:8px;
+    margin-left:50px;
+    font-size:18px;
+    font-weight:bolder;
+    float: left;
     margin-right:50px;
   }
   &__image{

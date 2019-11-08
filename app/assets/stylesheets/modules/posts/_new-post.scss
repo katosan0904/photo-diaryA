@@ -1,7 +1,7 @@
 .new-post{
   width: 700px;
   background-color:#EEEEEE;
-  height: 1020px;
+  height: 1190px;
   margin: 0 auto;
   margin-bottom: 10px;
   &__heading{
@@ -27,6 +27,28 @@
       }
     }
     &__place{
+      &--label{
+        font-weight:bold;
+        margin-top:20px;
+      }
+      &--input{
+        @include input-text-default;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__category{
+      &--label{
+        font-weight:bold;
+        margin-top:20px;
+      }
+      &--select{
+        @include select-default;
+        margin-top:6px;
+        margin-bottom:20px;
+      }
+    }
+    &__new-category{
       &--label{
         font-weight:bold;
         margin-top:20px;
