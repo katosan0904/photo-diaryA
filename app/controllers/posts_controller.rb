@@ -39,7 +39,6 @@ class PostsController < ApplicationController
 
   def update
     @post=Post.find(params[:id])
-    binding.pry
     if post_params[:category_attributes][:category].present?
       @category=Category.create(category_attributes_params[:category_attributes])
       @post.category_id=nil

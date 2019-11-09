@@ -17,5 +17,6 @@
   .post__category
     %p.post__category--text
       =fa_icon 'folder'
-      =post.category.category
+      = link_to category_path(post.category_id) do
+        =post.category.category
     

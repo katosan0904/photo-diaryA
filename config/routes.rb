@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :posts, only:[:show, :index, :destroy, :create, :new, :edit, :update] do
     resources :comments, only:[:index, :create, :destroy]
   end
+
+  resources :categories, only:[:show]
 end

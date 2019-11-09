@@ -70,8 +70,11 @@
     bottom:10px;
     left:10px;
     &--text{
-    color:#fff;
-    font-weight:lighter;
+      font-weight:lighter;
+      color:#fff;
+      a{
+        color:#fff;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 .new-post
   .new-post__heading
     %p.new-post__heading--text
-      投稿する
+      編集する
   .new-post__form
     = form_for @post do |f|
       .new-post__form__title
@@ -28,4 +28,4 @@
         =f.label :text, "内容", class:"new-post__form__text--label"
         =f.text_area :text, class:"new-post__form__text--input"
       .new-post__form__submit
-        =f.submit "投稿する",class:"new-post__form__submit--button"
+        =f.submit "編集する",class:"new-post__form__submit--button"

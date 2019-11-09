@@ -1,0 +1,5 @@
+.category-show
+  .category-show__post
+    =render partial: "./posts/post",collection: @posts, as: :post
+  .category-show__paginate
+    =paginate @posts
