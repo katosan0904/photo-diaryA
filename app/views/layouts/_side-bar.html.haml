@@ -1,0 +1,11 @@
+.side-bar
+  .side-bar__title
+    %p.side-bar__title--text 
+      カテゴリー一覧
+  .side-bar__category
+    %ul.side-bar__category--list
+      -Category.all.each do |category|
+        %li.side-bar__category--list--link
+          =fa_icon 'folder'
+          =link_to category_path(category.id) do
+            =category.category
