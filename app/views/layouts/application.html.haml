@@ -8,7 +8,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     =render partial: "layouts/header"
-    -if controller.controller_name== "posts" || controller.controller_name=="categories"
+    -if controller.controller_name== "posts" || controller.controller_name=="categories" 
       =render partial: "layouts/side-bar"
     = yield
     =render partial: "layouts/footer"
