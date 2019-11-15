@@ -72,6 +72,9 @@
       &--index{
         overflow: scroll;
         height:490px;
+        &::-webkit-scrollbar {
+          display:none;
+      }
       }
       &--form{
         position: absolute;
