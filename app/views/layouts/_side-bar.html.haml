@@ -4,8 +4,11 @@
       カテゴリー一覧
   .side-bar__category
     %ul.side-bar__category--list
-      -Category.all.each do |category|
+      -Category.all.each_with_index do |category, idx|
         %li.side-bar__category--list--link
           =fa_icon 'folder'
-          =link_to category_path(category.id) do
+          =link_to category_path(category.id) ,class:"category-name" do
             =category.category
+          -if signed_in? && current_user.id==1 && idx >= 1
+            =link_to "/categories/#{category.id}" , method: :DELETE, class:"delete-category-button" do 
+              削除

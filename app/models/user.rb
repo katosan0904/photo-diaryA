@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :user_id, dependent: :destroy
 
   validates :nickname, presence: true
+  validates :password, presence: true, length: { minimum: 8}
+  validates :email, presence: true, format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },uniqueness: true
 end

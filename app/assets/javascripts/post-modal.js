@@ -7,7 +7,7 @@ $(function(){
   });
   $('.post-modal__window--cancel').on('click',function(){
     $('.post-modal').fadeOut();
-    $('body').css("overflow", "scroll");
+    $('body').css("overflow-y", "scroll");
   });
   $('.post-modal__window--ok').on('click', function(){
     $('.modal').fadeOut();

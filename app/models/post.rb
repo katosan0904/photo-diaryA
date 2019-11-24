@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   belongs_to :category 
   accepts_nested_attributes_for :category
   
-  validates_presence_of :user
-
+  validates :user_id, presence: true
+  validates :image, presence: true
+  validates :title, presence: true
 end

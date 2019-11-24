@@ -81,7 +81,6 @@ class PostsController < ApplicationController
   def category_attributes_params
     params.require(:post).permit(
       category_attributes: [
-        
         :category
       ]
     )
