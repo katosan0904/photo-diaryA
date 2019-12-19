@@ -18,3 +18,4 @@ class CategoriesController < ApplicationController
   end
 
 end
+aaaa
